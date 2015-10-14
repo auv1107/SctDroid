@@ -21,6 +21,8 @@
     <dimen name="padding_xlarge">25dp</dimen>
     <dimen name="padding_xxlarge">30dp</dimen>
 
+    <dimen name="actionbar_height">50dp</dimen>
+
     <dimen name="corner_radius_oval">16dp</dimen>
     <dimen name="height_profile_picture_with_toolbar">320dp</dimen>
     <dimen name="margin_top_button_message">290dp</dimen>

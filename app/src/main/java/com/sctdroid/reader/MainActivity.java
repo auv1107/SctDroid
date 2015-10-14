@@ -1,33 +1,15 @@
 package com.sctdroid.reader;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.FragmentById;
 
-@EActivity(R.layout.layout_course_detail)
-public class MainActivity extends AppCompatActivity {
+@EActivity(R.layout.activity_main)
+public class MainActivity extends FragmentActivity {
+    @FragmentById(R.id.fragment)
+    Fragment fragment;
 
-//    @ViewById(R.id.tv)
-//    TextView tv;
-//
-//    @StringRes(R.string.annotation_test)
-//    String promt;
-//
-//    @AfterViews
-//    void afterViews(){
-//        tv.setText(promt);
-//    }
-
-//    @ViewById(R.id.button)
-//    ImageButton button;
-//
-//    @AfterViews
-//    void afterViews() {
-//    }
-//
-//    @Click
-//    public void button() {
-//        ((TransitionDrawable)button.getDrawable()).startTransition(500);
-//    }
 
 }
