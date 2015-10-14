@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_large">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="51dp"
+        android:text="Task" />
+
+    <EditText
+        android:id="@+id/et_new_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_new_count"
+        android:layout_alignStart="@+id/et_new_count"
+        android:layout_alignTop="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_new_task"
+        android:layout_marginTop="36dp"
+        android:text="Count" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_new_count"
+        android:layout_marginTop="43dp"
+        android:text="Time(min)" />
+
+    <EditText
+        android:id="@+id/et_new_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_new_time"
+        android:layout_alignStart="@+id/et_new_time"
+        android:layout_alignTop="@+id/textView7"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/et_new_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_new_description"
+        android:layout_alignStart="@+id/et_new_description"
+        android:layout_alignTop="@+id/textView8"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_new_time"
+        android:layout_marginTop="52dp"
+        android:text="Discription" />
+
+    <EditText
+        android:id="@+id/et_new_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btn_new_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_new_description"
+        android:layout_alignRight="@+id/et_new_description"
+        android:layout_below="@+id/et_new_description"
+        android:layout_marginTop="45dp"
+        android:text="Ok" />
+
+    <Button
+        android:id="@+id/btn_new_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_new_description"
+        android:layout_alignStart="@+id/et_new_description"
+        android:layout_alignTop="@+id/btn_new_ok"
+        android:text="Cancel" />
+
+</RelativeLayout>

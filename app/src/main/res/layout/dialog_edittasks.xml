@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="67dp"
+        android:text="Selected" />
+
+    <TextView
+        android:id="@+id/tv_selected_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView12"
+        android:layout_toEndOf="@+id/textView13"
+        android:layout_toRightOf="@+id/textView13"
+        tools:text="1,2,5,6" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="49dp"
+        android:text="Time(min)" />
+
+    <EditText
+        android:id="@+id/et_edit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_selected_items"
+        android:layout_alignStart="@+id/tv_selected_items"
+        android:layout_alignTop="@+id/textView12"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:layout_below="@+id/et_edit_time"
+        android:layout_marginTop="42dp"
+        android:text="Description" />
+
+    <EditText
+        android:id="@+id/et_edit_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_edit_time"
+        android:layout_alignStart="@+id/et_edit_time"
+        android:layout_alignTop="@+id/textView13"
+        android:ems="10"
+        android:inputType="text|textMultiLine" />
+
+    <Button
+        android:id="@+id/btn_edit_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_edit_description"
+        android:layout_alignRight="@+id/et_edit_description"
+        android:layout_alignTop="@+id/btn_edit_cancel"
+        android:text="Ok" />
+
+    <Button
+        android:id="@+id/btn_edit_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_edit_description"
+        android:layout_alignStart="@+id/et_edit_description"
+        android:layout_below="@+id/et_edit_description"
+        android:layout_marginTop="60dp"
+        android:text="Cancel" />
+</RelativeLayout>
