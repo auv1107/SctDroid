@@ -32,11 +32,23 @@ public class TaskFinder implements Finder<Task> {
     }
 
     void initSimulateData() {
-        list_task.add(new Task());
-        list_task.add(new Task());
-        list_task.add(new Task());
-        list_task.add(new Task());
-        list_task.add(new Task());
-        list_task.add(new Task());
+        List<TItem> list = new ArrayList<>();
+
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+        list.add(new TItem(45, "description", 0, false));
+
+        list_task.add(new Task("guita", 20, list));
+        list_task.add(new Task("guita", 20, list));
+        list_task.add(new Task("guita", 20, list));
+        list_task.add(new Task("guita", 20, list));
+        list_task.add(new Task("guita", 20, list));
     }
 }

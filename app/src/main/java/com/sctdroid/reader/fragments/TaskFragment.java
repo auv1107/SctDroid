@@ -1,6 +1,5 @@
 package com.sctdroid.reader.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -59,11 +58,13 @@ public class TaskFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             if (getCount() == 1 || position == getCount() - 1) {
-                return new NewtaskFragments();
+                return NewtaskFragments_.builder().build();
             } else {
-                TaskDetailFragment fragment = new TaskDetailFragment();
+                TaskDetailFragment fragment = TaskDetailFragment_.builder().build();
                 Bundle bundle = new Bundle();
                 bundle.putInt(Constants.PARENT_ID, position);
+                bundle.putInt(Constants.TASK_COUNT, list_task.get(position).count);
+                bundle.putString(Constants.TASK_NAME, list_task.get(position).task);
                 fragment.setArguments(bundle);
                 return fragment;
             }

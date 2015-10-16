@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="90dp"
     android:background="@drawable/listitem_background">
 
     <FrameLayout
         android:id="@+id/fl_status"
         android:layout_width="17dp"
         android:layout_height="98dp"
-        android:layout_margin="1dp"
-        android:background="#1ba100"></FrameLayout>
+        android:layout_marginBottom="1dp"
+        android:background="@color/light_blue"></FrameLayout>
 
 
     <ImageView

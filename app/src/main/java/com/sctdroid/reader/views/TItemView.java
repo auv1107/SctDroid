@@ -17,21 +17,18 @@ import org.androidannotations.annotations.ViewById;
  */
 @EViewGroup(R.layout.listview_item)
 public class TItemView extends RelativeLayout {
+    @ViewById(R.id.fl_status)
+    FrameLayout fl_status;
+    @ViewById(R.id.tv_time)
+    TextView tv_time;
+    @ViewById(R.id.tv_description)
+    TextView tv_description;
+    @ViewById(R.id.iv_checkbox)
+    ImageView iv_checkbox;
+
     public TItemView(Context context) {
         super(context);
     }
-
-    @ViewById(R.id.fl_status)
-    FrameLayout fl_status;
-
-    @ViewById(R.id.tv_time)
-    TextView tv_time;
-
-    @ViewById(R.id.tv_description)
-    TextView tv_description;
-
-    @ViewById(R.id.iv_checkbox)
-    ImageView iv_checkbox;
 
     public void bind(TItem item) {
         if (item != null) {

@@ -5,4 +5,6 @@ package com.sctdroid.reader;
  */
 public class Constants {
     public static final String PARENT_ID = "parentId";
+    public static final String TASK_NAME = "task_name";
+    public static final String TASK_COUNT = "task_count";
 }
