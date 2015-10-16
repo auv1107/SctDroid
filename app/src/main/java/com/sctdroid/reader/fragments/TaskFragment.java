@@ -1,13 +1,17 @@
 package com.sctdroid.reader.fragments;
 
+import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.widget.ImageView;
 
+import com.sctdroid.reader.Constants;
 import com.sctdroid.reader.R;
 import com.sctdroid.reader.Task;
+import com.sctdroid.reader.TaskFinder;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -36,11 +40,14 @@ public class TaskFragment extends Fragment {
 
     @ViewById(R.id.vp_pager)
     ViewPager vp_pager;
-    List<Task> list_task = new ArrayList<>();
+
+    TaskFinder finder = new TaskFinder();
+    List<Task> list_task;
     List<Fragment> list_fragments = new ArrayList<>();
 
     @AfterViews
     void afterviews() {
+        list_task = finder.findAll();
         vp_pager.setAdapter(new PagerAdapter(getActivity().getSupportFragmentManager()));
     }
 
@@ -52,9 +59,13 @@ public class TaskFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             if (getCount() == 1 || position == getCount() - 1) {
-                return new NewtaskFragments_();
+                return new NewtaskFragments();
             } else {
-                return new NewtaskFragments_();
+                TaskDetailFragment fragment = new TaskDetailFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt(Constants.PARENT_ID, position);
+                fragment.setArguments(bundle);
+                return fragment;
             }
         }
 
@@ -63,5 +74,6 @@ public class TaskFragment extends Fragment {
             return list_task == null ? 1 : list_task.size() + 1;
         }
     }
+
 
 }

@@ -6,4 +6,6 @@ package com.sctdroid.reader;
 public class TItem {
     public int time;
     public String description;
+    public int status;
+    public boolean selected;
 }
